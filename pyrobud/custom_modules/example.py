@@ -4,13 +4,15 @@ from pathlib import PurePosixPath
 from typing import IO
 
 import telethon as tg
+from telethon.tl.types import PeerUser, PeerChat, PeerChannel
 
 from .. import command, module, util
 
 
 class ExampleModule(module.Module):
     name = "Example"
-    disabled = True
+    disabled = False
+    channelId = 1179400979
 
     db: util.db.AsyncDB
 
@@ -18,8 +20,8 @@ class ExampleModule(module.Module):
         self.db = self.bot.get_db("example")
 
     async def on_message(self, event: tg.events.NewMessage.Event) -> None:
-        self.log.info(f"Received message: {event.message}")
-        await self.db.inc("messages_received")
+        if isinstance(event.message.peer_id, PeerChannel) and event.message.peer_id.channel_id == self.channelId:
+            self.log.info(f"Received message: {event.message}")
 
     @command.desc("Simple echo/test command")
     @command.alias("echotest", "test2")
