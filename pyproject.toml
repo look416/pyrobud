@@ -31,7 +31,7 @@ classifiers = [
 "Community" = "https://t.me/pyrobud"
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.8"
 
 # Core
 aiohttp = "^3.6.2"
@@ -58,7 +58,8 @@ beauty-print = "^0.6.0"
 emoji = ">=0.5.4,<0.7.0"
 zmq = "^0.0.0"
 spacy = "^2.3.5"
-fxparser = "^2.2.4"
+fxparser = "^2.2.5"
+pandas = "^1.2.0"
 
 [tool.poetry.extras]
 fast = ["cryptg"]

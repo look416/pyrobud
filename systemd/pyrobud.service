@@ -9,14 +9,18 @@ Restart=always
 RestartSec=10
 
 # Execution parameters
-User=pyrobud
-Group=pyrobud
-WorkingDirectory=/home/pyrobud/pyrobud
-ExecStart=/home/pyrobud/venv/bin/python -O /home/pyrobud/pyrobud/main.py
+User=test
+Group=test
+WorkingDirectory=/home/test/pyrobud
+ExecStart=poetry run pyrobud
 
 # Limit damage in case something goes awry
 MemoryLimit=512M
 CPUQuota=200%
+
+# Logging
+StandardOutput=append:/home/test/logs/pyrobud/out.log
+StandardError=append:/home/test/logs/pyrobud/err.log
 
 # Security
 PrivateTmp=true
