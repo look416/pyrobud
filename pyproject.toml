@@ -58,7 +58,7 @@ beauty-print = "^0.6.0"
 emoji = ">=0.5.4,<0.7.0"
 zmq = "^0.0.0"
 spacy = "^2.3.5"
-fxparser = "^2.2.5"
+fxparser = "^2.3.1"
 pandas = "^1.2.0"
 
 [tool.poetry.extras]
