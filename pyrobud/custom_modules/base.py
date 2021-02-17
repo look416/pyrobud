@@ -23,6 +23,8 @@ class BaseModule(module.Module):
     magicNumber = 80000000
     parserHelper = ParserHelper()
     allowMedia = False
+    prefix = ""
+    suffix = "pro"
 
     db: util.db.AsyncDB
 
@@ -59,6 +61,7 @@ class BaseModule(module.Module):
         exponent = 1000 if 'JPY' in order.symbol else 100000
         if "GOLD" in order.symbol or "XAU" in order.symbol:
             exponent = 100
+            order.symbol = "XAUUSD"
 
         tp = 0
         if len(order.tpList) > 0:
@@ -66,6 +69,11 @@ class BaseModule(module.Module):
         
         if order.price == 0.0:
             order.price = order.sl + (400 / exponent * (1 if order.type == 1 else -1))
+
+        if self.suffix:
+            order.symbol = f"{order.symbol}.{self.suffix}"
+        if self.prefix:
+            order.symbol = f"{self.prefix}.{order.symbol}"
 
         _zmq = mt4.DWX_ZeroMQ_Connector(_host=self.zmqHost)
         _trade = _zmq._generate_default_order_dict()
