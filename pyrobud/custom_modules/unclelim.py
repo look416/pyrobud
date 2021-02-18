@@ -20,3 +20,4 @@ class UncleLimModule(BaseModule):
     channelId = 1374877978
     disabled = False
     magicNumber = 82704674
+    allowMedia = True

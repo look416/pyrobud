@@ -268,7 +268,7 @@ python-versions = "*"
 
 [[package]]
 name = "fxparser"
-version = "2.3.3"
+version = "2.3.4"
 description = "A forex message parser to extract information such as symbols, tps, and sls"
 category = "main"
 optional = false
@@ -1357,8 +1357,8 @@ flatbuffers = [
     {file = "flatbuffers-1.12.tar.gz", hash = "sha256:63bb9a722d5e373701913e226135b28a6f6ac200d5cc7b4d919fa38d73b44610"},
 ]
 fxparser = [
-    {file = "fxparser-2.3.3-py3-none-any.whl", hash = "sha256:f6ce499506733fd99345486c9d7015e6c0da6ab6e8ea342ff7d3d81c38bd14eb"},
-    {file = "fxparser-2.3.3.tar.gz", hash = "sha256:3d4a3769a4be184470e0bfa4b246addc605b62073b022cc816900a3c2c35bdb9"},
+    {file = "fxparser-2.3.4-py3-none-any.whl", hash = "sha256:6a7cb869a1283adc4b88adc30eae563788b363254d8696d802ad4aeea6105dee"},
+    {file = "fxparser-2.3.4.tar.gz", hash = "sha256:7ab3ee9b7b4d17668ea020fc09fe44e8ec989c4dded5c261948298bda8a8764c"},
 ]
 gast = [
     {file = "gast-0.3.3-py2.py3-none-any.whl", hash = "sha256:8f46f5be57ae6889a4e16e2ca113b1703ef17f2b0abceb83793eaba9e1351a45"},
