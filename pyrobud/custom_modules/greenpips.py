@@ -20,4 +20,5 @@ class DayFinanceModule(BaseModule):
     # tt = 1179400979 1480231253
     disabled = False
     magicNumber = 82704673
+    allowMedia = True
 

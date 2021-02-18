@@ -19,6 +19,7 @@ class PPEModule(BaseModule):
     channelId = 1474572570
     disabled = False
     magicNumber = 82704669
+    allowMedia = True
 
     async def on_message(self, event: tg.events.NewMessage.Event) -> None:
         if isinstance(event.message.peer_id, PeerChannel) and event.message.peer_id.channel_id == self.channelId:
