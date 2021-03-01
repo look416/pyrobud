@@ -18,5 +18,5 @@ from .. import command, module, util, mt4
 class DirectorFXModule(BaseModule):
     name = "DirectorFX"
     channelId = 1467194174
-    disabled = False
+    disabled = True
     magicNumber = 82704662

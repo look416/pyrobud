@@ -17,6 +17,6 @@ from .. import command, module, util, mt4
 class JamesLokModule(BaseModule):
     name = "JamesLok"
     channelId = 1426365121
-    disabled = True
+    disabled = False
     magicNumber = 82704667
     allowMedia = True
