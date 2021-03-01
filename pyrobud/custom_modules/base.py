@@ -86,6 +86,7 @@ class BaseModule(module.Module):
         _trade['_magic'] = self.magicNumber
         if not order.market:
             _trade["_price"] = order.price
+            _trade['_type'] = 2 if _trade['_type'] == 0 else 3
         _zmq._DWX_MTX_NEW_TRADE_(_order=_trade)
         await self.bot.client.send_message(PeerChannel(channel_id=self.debugChannel), f"{_trade}")
         self.log.info(f"Order created: {_trade}")
