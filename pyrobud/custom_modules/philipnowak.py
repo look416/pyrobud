@@ -14,8 +14,9 @@ from .base import BaseModule
 from .. import command, module, util, mt4
 
 
-class IntraEliteModule(BaseModule):
-    name = "IntraElite"
-    channelId = 1353071232
-    disabled = True
-    magicNumber = 82704666
+class PhilipNowakModule(BaseModule):
+    name = "PhilipNowak"
+    channelId = 1294569912
+    disabled = False
+    magicNumber = 82704677
+    allowMedia = True

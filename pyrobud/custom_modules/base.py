@@ -65,7 +65,7 @@ class BaseModule(module.Module):
 
         tp = 0
         if len(order.tpList) > 0:
-            tp = float(order.tpList[0])
+            tp = float(order.tpList[-1])
         
         if order.price == 0.0:
             order.price = order.sl + (400 / exponent * (1 if order.type == 1 else -1))
