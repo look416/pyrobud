@@ -15,7 +15,7 @@ from .. import command, module, util, mt4
 
 class BaseModule(module.Module):
     name = "BaseModel"
-    zmqHost = "192.168.88.211"
+    zmqHost = "192.168.88.107"
     channelId = 1480231253
     debugChannel = 1347732970
     # tt = 1179400979 1480231253
@@ -65,7 +65,7 @@ class BaseModule(module.Module):
 
         tp = 0
         if len(order.tpList) > 0:
-            tp = float(order.tpList[-1])
+            tp = float(order.tpList[1]) if len(order.tpList) > 1 else 0
         
         if order.price == 0.0:
             order.price = order.sl + (400 / exponent * (1 if order.type == 1 else -1))
