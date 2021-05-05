@@ -18,6 +18,6 @@ from .. import command, module, util, mt4
 class UncleLimModule(BaseModule):
     name = "UncleLim"
     channelId = 1374877978
-    disabled = False
+    disabled = True
     magicNumber = 82704674
     allowMedia = True

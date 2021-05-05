@@ -17,6 +17,6 @@ from .. import command, module, util, mt4
 class PPEModule(BaseModule):
     name = "PPE"
     channelId = 1474572570
-    disabled = False
+    disabled = True
     magicNumber = 82704669
     allowMedia = True

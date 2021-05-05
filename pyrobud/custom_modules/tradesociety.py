@@ -18,5 +18,5 @@ from .. import command, module, util, mt4
 class TradeSocietyModule(BaseModule):
     name = "TradeSociety"
     channelId = 1183694013
-    disabled = False
+    disabled = True
     magicNumber = 82704670

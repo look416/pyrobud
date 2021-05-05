@@ -14,7 +14,7 @@ from fxparser import ParserHelper
 
 from .. import command, module, util, mt4
 
-class DayFinanceModule(BaseModule):
+class GreenPipsModule(BaseModule):
     name = "GreenPips"
     channelId = 1169845503
     # tt = 1179400979 1480231253

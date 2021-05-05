@@ -17,7 +17,7 @@ from .. import command, module, util, mt4
 class VVIPModule(BaseModule):
     name = "VVIPGoldenCircle"
     channelId = 1381961852
-    disabled = False
+    disabled = True
     magicNumber = 82704671
 
     async def on_message(self, event: tg.events.NewMessage.Event) -> None:
