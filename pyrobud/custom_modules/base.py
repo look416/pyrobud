@@ -62,7 +62,6 @@ class BaseModule(module.Module):
     def onPullData(self, data):
         print(data)
         if '_response' in data.keys() and data['_response'] == '130' and self.tmpOrder is not None:
-            print("running now")
             asyncio.run(self.order(self.tmpOrder, True))
 
     async def order(self, order, isMarket=False):
