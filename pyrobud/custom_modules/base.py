@@ -60,7 +60,7 @@ class BaseModule(module.Module):
         return self.parserHelper.parse_text(message)
 
     def onPullData(self, data):
-        print(data)
+        self.log.info(data)
         if '_response' in data.keys() and data['_response'] == '130' and self.tmpOrder is not None:
             asyncio.run(self.order(self.tmpOrder, True))
 
