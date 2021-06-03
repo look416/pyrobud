@@ -17,7 +17,7 @@ from .. import command, module, util, mt4
 
 class BaseModule(module.Module):
     name = "BaseModel"
-    zmqHost = "192.168.88.111"
+    zmqHost = "192.168.88.239"
     channelId = 1480231253
     debugChannel = 1347732970
     # tt = 1179400979 1480231253
@@ -26,7 +26,7 @@ class BaseModule(module.Module):
     parserHelper = ParserHelper()
     allowMedia = False
     prefix = ""
-    suffix = "ax"
+    suffix = ""
     tmpOrder = None
 
     db: util.db.AsyncDB
@@ -100,7 +100,6 @@ class BaseModule(module.Module):
         if not order.market and not isMarket:
             _trade["_price"] = order.price
             _trade['_type'] = 2 if _trade['_type'] == 0 else 3
-        print("sending_orders")
         _zmq._DWX_MTX_NEW_TRADE_(_order=_trade)
         await self.bot.client.send_message(PeerChannel(channel_id=self.debugChannel), f"{_trade}")
         self.log.info(f"Order created: {_trade}")
